@@ -83,10 +83,10 @@ set_property(CACHE gRPC_ZLIB_PROVIDER PROPERTY STRINGS "module" "package")
 set(gRPC_CARES_PROVIDER "package" CACHE STRING "Provider of c-ares library")
 set_property(CACHE gRPC_CARES_PROVIDER PROPERTY STRINGS "module" "package")
 
-set(gRPC_RE2_PROVIDER "module" CACHE STRING "Provider of re2 library")
+set(gRPC_RE2_PROVIDER "package" CACHE STRING "Provider of re2 library")
 set_property(CACHE gRPC_RE2_PROVIDER PROPERTY STRINGS "module" "package")
 
-set(gRPC_SSL_PROVIDER "module" CACHE STRING "Provider of ssl library")
+set(gRPC_SSL_PROVIDER "package" CACHE STRING "Provider of ssl library")
 set_property(CACHE gRPC_SSL_PROVIDER PROPERTY STRINGS "module" "package")
 
 set(gRPC_PROTOBUF_PROVIDER "package" CACHE STRING "Provider of protobuf library")
@@ -102,7 +102,7 @@ else()
   set(gRPC_BENCHMARK_PROVIDER "none")
 endif()
 
-set(gRPC_ABSL_PROVIDER "module" CACHE STRING "Provider of absl library")
+set(gRPC_ABSL_PROVIDER "package" CACHE STRING "Provider of absl library")
 set_property(CACHE gRPC_ABSL_PROVIDER PROPERTY STRINGS "module" "package")
 
 set(gRPC_ABSL_USED_TARGETS
