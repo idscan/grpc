@@ -485,7 +485,7 @@ class OpenTelemetryPluginImpl::CounterExporter final {
       : impl_(impl), md_(md) {}
 
   void Export(opentelemetry::metrics::ObserverResult result) {
-    Sink sink(std::get<opentelemetry::nostd::shared_ptr<
+    Sink sink(opentelemetry::nostd::get<opentelemetry::nostd::shared_ptr<
                   opentelemetry::metrics::ObserverResultT<int64_t>>>(result),
               md_->shape);
     impl_->QueryMetrics({md_->name}, sink);
